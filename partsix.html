@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+        <!--mouse script (some ai overview aid, understadning how to use doc.bod.sty.curs for my cursor type function)-->
+        <script>
+          let lastMouseX = 0;
+          const leftCursor = 'url("img/mouseleft.png"), auto';
+          const rightCursor = 'url("img/mousright.png"), auto';
+          //checks the cursor on the body of document
+          function setCursor(cursorType) {
+            document.body.style.cursor = cursorType;
+          }
+          //using similar code to my other script. I created and e.clientX to track where if the mouse is moving left it will change to mouseleft.png else move righ
+          document.addEventListener("mousemove", (e) => {
+            if (e.clientX < lastMouseX) {
+              setCursor(leftCursor);
+            } else if (e.clientX > lastMouseX) {
+              setCursor(rightCursor);
+            }
+            lastMouseX = e.clientX;
+          });
+          setCursor(centerCursor);
+        </script>
+    <script>
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault(); //stops the default right-click menu
+        window.location.href = 'partseven.html'; //redirects you to next page
+      });
+    </script>
+    <script src="js/framesix.js"></script>
+  </body>
+</html>

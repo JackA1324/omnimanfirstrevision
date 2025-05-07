@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Kdam';
+  src: URL('../font/KdamThmorPro-Regular.ttf');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Kdam';
+  color: white;
+  background-color:black;
+}
+canvas {
+  display: block;
+  margin: auto;
+}
